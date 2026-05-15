@@ -24,14 +24,14 @@ jobs:
           unzip -o weread-skills.zip -d weread-skills-temp/
           rm weread-skills.zip
 
-      - name: 同步文件到 skills/
+      - name: 同步文件到 skills/weread/
         run: |
-          mkdir -p skills/
-          rm -f skills/*.md
-          cp weread-skills-temp/weread-skills/*.md skills/
+          mkdir -p skills/weread/
+          rm -f skills/weread/*.md
+          cp weread-skills-temp/weread-skills/*.md skills/weread/
           rm -rf weread-skills-temp/
           echo "同步的文件列表："
-          ls -la skills/*.md
+          ls -la skills/weread/*.md
 
       - name: 检查变更
         id: check_changes

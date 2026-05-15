@@ -52,17 +52,18 @@ View my weekly reading statistics
 ```
 weread-skills/
 ├── skills/
-│   ├── SKILL.md              # Main skill file
-│   ├── book.md               # Book related functions
-│   ├── search.md             # Search related functions
-│   ├── shelf.md              # Shelf management
-│   ├── notes.md              # Notes and highlights
-│   ├── review.md             # Reviews and thoughts
-│   ├── profile.md            # Profile information
-│   ├── readdata.md           # Reading statistics
-│   ├── discover.md           # Discovery related
-│   ├── README.md             # Skill documentation
-│   └── metadata.json         # Metadata
+│   └── weread/               # Skill subdirectory (name = weread)
+│       ├── SKILL.md          # Main skill file with frontmatter
+│       ├── book.md           # Book related functions
+│       ├── search.md         # Search related functions
+│       ├── shelf.md          # Shelf management
+│       ├── notes.md          # Notes and highlights
+│       ├── review.md         # Reviews and thoughts
+│       ├── profile.md        # Profile information
+│       ├── readdata.md       # Reading statistics
+│       ├── discover.md       # Discovery related
+│       ├── README.md         # Skill documentation
+│       └── metadata.json     # Metadata
 ├── README.md                 # English documentation (main)
 ├── README.zh.md              # Chinese documentation
 ├── CHANGELOG.md              # Changelog
