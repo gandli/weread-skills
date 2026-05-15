@@ -1,8 +1,8 @@
 {
   "name": "weread",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "organization": "微信读书",
-  "description": "微信读书官方 Agent Skill，提供书籍搜索、书架管理、笔记查看等功能",
+  "description": "WeRead Official Agent Skill - Search books, manage bookshelf, view notes and reading statistics",
   "author": "weread.qq.com",
   "categories": ["books", "reading", "productivity"],
   "tags": ["weread", "books", "notes", "reading", "e-book"]
