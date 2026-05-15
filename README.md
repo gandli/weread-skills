@@ -62,7 +62,7 @@ weread-skills/
 │       ├── profile.md        # Profile information
 │       ├── readdata.md       # Reading statistics
 │       ├── discover.md       # Discovery related
-│       ├── README.md         # Skill documentation
+│       ├── SKILL-README.md   # Skill documentation
 │       └── metadata.json     # Metadata
 ├── README.md                 # English documentation (main)
 ├── README.zh.md              # Chinese documentation

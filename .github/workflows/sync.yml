@@ -24,15 +24,16 @@ jobs:
           unzip -o weread-skills.zip -d weread-skills-temp/
           rm weread-skills.zip
 
-      - name: 同步微信读书 skill 文件（保留仓库文档）
+      - name: 同步微信读书 skill 文件到 skills/weread/
         run: |
-          # 删除旧的 skill 文件（不删除 README.md, README.zh.md, CHANGELOG.md）
-          rm -f SKILL.md book.md search.md shelf.md notes.md review.md profile.md readdata.md discover.md
+          mkdir -p skills/weread/
+          # 删除旧的 skill 文件
+          rm -f skills/weread/*.md skills/weread/metadata.json
           # 复制新的 skill 文件
-          cp weread-skills-temp/weread-skills/*.md .
+          cp weread-skills-temp/weread-skills/*.md skills/weread/
           rm -rf weread-skills-temp/
           echo "同步的文件列表："
-          ls -la SKILL.md book.md search.md shelf.md notes.md review.md profile.md readdata.md discover.md
+          ls -la skills/weread/*.md
 
       - name: 检查变更
         id: check_changes
