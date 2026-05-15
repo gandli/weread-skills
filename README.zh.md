@@ -1,14 +1,21 @@
+<div align="center">
+
+[![微信读书](https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-60x60.png)](https://weread.qq.com/r/weread-skills)
+
 # 微信读书 SKILLS
 
 ## 让 AI 成为你的阅读搭档
 
-连接微信读书账号，让 AI 助手随时查阅你的阅读记录。
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-自动同步-blue?logo=github-actions)](.github/workflows/sync.yml)
+[![Agent Skills](https://img.shields.io/badge/Agent-Skills-purple)](https://skills.sh/gandli/weread-skills)
+[![English](https://img.shields.io/badge/README-English-blue)](README.md)
 
+---
+
+连接微信读书账号，让 AI 助手随时查阅你的阅读记录。  
 本仓库是微信读书官方 Agent Skills 的镜像，通过 GitHub Actions 自动同步更新。
 
-[![微信读书](https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png)](https://weread.qq.com/r/weread-skills)
-[![](https://skills.sh/b/gandli/weread-skills)](https://skills.sh/gandli/weread-skills)
-[![English](https://img.shields.io/badge/README-English-blue)](README.md)
+</div>
 
 ## 安装
 

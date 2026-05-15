@@ -1,14 +1,21 @@
+<div align="center">
+
+[![WeRead Official](https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-60x60.png)](https://weread.qq.com/r/weread-skills)
+
 # WeRead SKILLS
 
 **Let AI be your reading partner**
 
-Connect your WeRead account, let AI assistant access your reading records anytime.
+[![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Auto--Sync-blue?logo=github-actions)](.github/workflows/sync.yml)
+[![Agent Skills](https://img.shields.io/badge/Agent-Skills-purple)](https://skills.sh/gandli/weread-skills)
+[![中文文档](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-green)](README.zh.md)
 
+---
+
+Connect your WeRead account, let AI assistant access your reading records anytime.  
 This is the official WeRead Agent Skills collection, automatically synced via GitHub Actions.
 
-[![WeRead Official](https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png)](https://weread.qq.com/r/weread-skills)
-[![](https://skills.sh/b/gandli/weread-skills)](https://skills.sh/gandli/weread-skills)
-[![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-green)](README.zh.md)
+</div>
 
 ## Installation
 
