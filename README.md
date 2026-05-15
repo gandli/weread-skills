@@ -1,7 +1,12 @@
 # WeRead SKILLS
 
-Official WeRead Agent Skills collection, automatically synced via GitHub Actions.
+**Let AI be your reading partner**
 
+Connect your WeRead account, let AI assistant access your reading records anytime.
+
+This is the official WeRead Agent Skills collection, automatically synced via GitHub Actions.
+
+[![WeRead Official](https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png)](https://weread.qq.com/r/weread-skills)
 [![](https://skills.sh/b/gandli/weread-skills)](https://skills.sh/gandli/weread-skills)
 [![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-green)](README.zh.md)
 
@@ -11,27 +16,42 @@ Official WeRead Agent Skills collection, automatically synced via GitHub Actions
 npx skills add gandli/weread-skills
 ```
 
+## Quick Setup
+
+After installing the Skill, you can access your personal reading information via API Key.
+
+1. Copy the Skill installation command and send it to your AI assistant
+2. Get API Key from [WeRead Official](https://weread.qq.com/r/weread-skills) to connect your account
+
+*API Key is used to connect your WeRead account, data is visible only to you.*
+
 ## Available Skills
 
 ### WeRead
 
-Official WeRead skill with book search, shelf management, note viewing, reading data, and more.
+Official WeRead skill with comprehensive reading management capabilities.
 
 **Use when:**
 
-- "Search for books about React"
+- "Search for books about AI"
 - "Show my bookshelf"
-- "View my reading data"
-- "Export my book notes"
+- "View my reading statistics"
+- "Export my book notes and highlights"
+- "Get book details and table of contents"
+- "Recommend books based on my preferences"
 
-**Features covered:**
+## Features
 
-- Book search and details
-- Bookshelf management
-- Notes and highlights
-- Reading statistics
-- Reviews and thoughts
-- Profile information
+| Feature | Description |
+|---------|-------------|
+| 📚 **Bookshelf Access** | Browse your personal bookshelf, get a complete overview of your collection |
+| 📊 **Reading Statistics** | In-depth analysis of duration, days, and preferences to quantify your reading habits |
+| 📝 **Notes & Highlights** | View personal highlights and thoughts, export notes, review your thinking |
+| 🔍 **Book Search** | Search any book in the library, quickly get title, author, rating, and more |
+| 📖 **Book Details** | View book details, table of contents, reading progress, understand your reading journey |
+| ✨ **Smart Recommendations** | Personalized or similar book recommendations based on your reading preferences |
+| 💬 **Reviews & Thoughts** | Manage your book reviews and reading thoughts |
+| 👤 **Profile Information** | Access your reading profile and statistics |
 
 ## Usage
 
@@ -45,6 +65,14 @@ Search for books about artificial intelligence
 
 ```
 View my weekly reading statistics
+```
+
+```
+Export all notes from "Sapiens"
+```
+
+```
+Show my bookshelf and recommend similar books
 ```
 
 ## Structure
@@ -61,7 +89,7 @@ weread-skills/
 │       ├── review.md         # Reviews and thoughts
 │       ├── profile.md        # Profile information
 │       ├── readdata.md       # Reading statistics
-│       ├── discover.md       # Discovery related
+│       ├── discover.md       # Discovery and recommendations
 │       ├── SKILL-README.md   # Skill documentation
 │       └── metadata.json     # Metadata
 ├── README.md                 # English documentation (main)
@@ -73,8 +101,20 @@ weread-skills/
 
 ## Automatic Sync
 
-This repository automatically syncs the latest SKILLS files from the official WeRead source daily via GitHub Actions.
+This repository automatically syncs the latest SKILLS files from the [official WeRead source](https://weread.qq.com/r/weread-skills) daily via GitHub Actions.
+
+Sync schedule: Daily at UTC 00:00 (Beijing time 08:00)
+
+## Official Resources
+
+- 🌐 **Official Website**: [https://weread.qq.com/](https://weread.qq.com/)
+- 📖 **Skill Introduction**: [https://weread.qq.com/r/weread-skills](https://weread.qq.com/r/weread-skills)
+- ⬇️ **Official Download**: `https://cdn.weread.qq.com/skills/weread-skills.zip`
 
 ## Disclaimer
 
 This repository is for technical research and learning purposes only. All SKILLS files are copyrighted by WeRead.
+
+---
+
+*Note: This is a community-maintained mirror of the official WeRead Skills. For the most up-to-date version, always check the [official website](https://weread.qq.com/r/weread-skills).*
