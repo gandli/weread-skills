@@ -1,6 +1,6 @@
 <div align="center">
 
-[![WeRead Official](https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-60x60.png)](https://weread.qq.com/r/weread-skills)
+<a href="https://weread.qq.com/r/weread-skills"><img src="https://rescdn.qqmail.com/node/wr/wrpage/style/images/independent/appleTouchIcon/apple-touch-icon-144x144.png" width="48" alt="WeRead" /></a>
 
 # WeRead SKILLS
 
