@@ -51,16 +51,17 @@ Skills 安装后自动可用。Agent 会在检测到相关任务时自动使用�
 ```
 weread-skills/
 ├── skills/
-│   └── weread/
-│       ├── SKILL.md          # 主技能文件
-│       ├── book.md           # 书籍相关功能
-│       ├── search.md         # 搜索相关功能
-│       ├── shelf.md          # 书架相关功能
-│       ├── notes.md          # 笔记相关功能
-│       ├── review.md         # 书评相关功能
-│       ├── profile.md        # 个人资料
-│       ├── readdata.md       # 阅读数据
-│       └── discover.md       # 发现相关
+│   ├── SKILL.md              # 主技能文件
+│   ├── book.md               # 书籍相关功能
+│   ├── search.md             # 搜索相关功能
+│   ├── shelf.md              # 书架相关功能
+│   ├── notes.md              # 笔记相关功能
+│   ├── review.md             # 书评相关功能
+│   ├── profile.md            # 个人资料
+│   ├── readdata.md           # 阅读数据
+│   ├── discover.md           # 发现相关
+│   ├── README.md             # Skill 说明
+│   └── metadata.json         # 元数据
 └── .github/workflows/
     └── sync.yml              # 自动同步工作流
 ```

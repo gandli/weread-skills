@@ -24,19 +24,19 @@ jobs:
           unzip -o weread-skills.zip -d weread-skills-temp/
           rm weread-skills.zip
 
-      - name: 同步文件到 skills/weread/
+      - name: 同步文件到 skills/
         run: |
-          mkdir -p skills/weread/
-          rm -f skills/weread/*.md
-          cp weread-skills-temp/weread-skills/*.md skills/weread/
+          mkdir -p skills/
+          rm -f skills/*.md
+          cp weread-skills-temp/weread-skills/*.md skills/
           rm -rf weread-skills-temp/
           echo "同步的文件列表："
-          ls -la skills/weread/*.md
+          ls -la skills/*.md
 
       - name: 检查变更
         id: check_changes
         run: |
-          git add skills/weread/
+          git add skills/
           if git diff --cached --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "没有检测到变更"
