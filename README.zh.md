@@ -17,34 +17,34 @@
 
 </div>
 
-## 安装
+## 快速配置
+
+### 第一步：安装 Skill
+
+将以下内容发送给你的 AI 助手即可自动安装：
+
+```
+下载 https://cdn.weread.qq.com/skills/weread-skills.zip 安装 skill
+```
+
+或通过 CLI 直接安装：
 
 ```bash
 npx skills add gandli/weread-skills
 ```
 
-## 快速配置
-
-安装 Skill 后，需要获取 API Key 才能访问你的个人阅读数据。
-
-### 第一步：获取 API Key
+### 第二步：获取 API Key
 
 1. 前往 [微信读书官方 Skill 页面](https://weread.qq.com/r/weread-skills)
 2. 使用微信读书账号登录
 3. 复制你的 API Key（格式：`wrk-xxxxxxxx`）
 
-### 第二步：配置 API Key
+### 第三步：连接账号
 
-告诉你的 AI 助手设置环境变量：
+将以下内容发送给你的 AI 助手（替换为你的 API Key）：
 
 ```
 export WEREAD_API_KEY=<你的api-key>
-```
-
-或者写入 shell 配置文件持久化：
-
-```bash
-echo 'export WEREAD_API_KEY=<你的api-key>' >> ~/.zshrc
 ```
 
 > **注意：** API Key 用于连接你的微信读书账号，数据仅你可见。
@@ -59,14 +59,10 @@ echo 'export WEREAD_API_KEY=<你的api-key>' >> ~/.zshrc
 | 🔍 **书籍搜索** | 在书城搜索任意书籍，快速获取书名、作者、评分等关键信息 |
 | 📖 **书籍详情** | 查看书籍详情、章节目录、阅读进度，了解你的阅读旅程 |
 | ✨ **推荐好书** | 基于你的阅读偏好，个性化推荐或相似书籍推荐 |
-| 💬 **书评与想法** | 管理你的书籍评论和阅读感想 |
-| 👤 **个人资料** | 访问你的阅读档案和统计数据 |
 
 ## 使用方法
 
-Skills 安装后自动可用，Agent 会在检测到相关任务时自动使用。
-
-**使用示例：**
+配置完成后，直接和 AI 助手对话即可：
 
 ```
 帮我搜索关于人工智能的书籍
@@ -88,10 +84,6 @@ Skills 安装后自动可用，Agent 会在检测到相关任务时自动使用�
 今年我读了多少本书？
 ```
 
-```
-《思考，快与慢》第三章有哪些热门划线？
-```
-
 ## 工作原理
 
 Skill 通过 API Key 连接微信读书的 Agent API Gateway：
@@ -108,7 +100,7 @@ API Key 绑定你的微信读书身份（vid），所有个人数据请求自动
 ```
 weread-skills/
 ├── skills/
-│   └── weread/               # Skill 子目录 (名称 = weread)
+│   └── weread/               # Skill 子目录
 │       ├── SKILL.md          # 主技能文件（包含 frontmatter）
 │       ├── book.md           # 书籍相关功能
 │       ├── search.md         # 搜索相关功能

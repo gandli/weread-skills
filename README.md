@@ -17,34 +17,34 @@ This is the official WeRead Agent Skills collection, automatically synced via Gi
 
 </div>
 
-## Installation
+## Quick Setup
+
+### Step 1: Install the Skill
+
+Copy the following command and send it to your AI assistant:
+
+```
+Download https://cdn.weread.qq.com/skills/weread-skills.zip and install the skill
+```
+
+Or install directly via CLI:
 
 ```bash
 npx skills add gandli/weread-skills
 ```
 
-## Quick Setup
-
-After installing the Skill, you need an API Key to access your personal reading data.
-
-### Step 1: Get Your API Key
+### Step 2: Get Your API Key
 
 1. Go to [WeRead Official Skill Page](https://weread.qq.com/r/weread-skills)
 2. Log in with your WeRead account
 3. Copy your API Key (format: `wrk-xxxxxxxx`)
 
-### Step 2: Configure the API Key
+### Step 3: Connect Your Account
 
-Tell your AI assistant to set the environment variable:
+Send the following command to your AI assistant with your API Key:
 
 ```
 export WEREAD_API_KEY=<your-api-key>
-```
-
-Or add it to your shell profile for persistence:
-
-```bash
-echo 'export WEREAD_API_KEY=<your-api-key>' >> ~/.zshrc
 ```
 
 > **Note:** The API Key is used to connect your WeRead account. Your data is only visible to you.
@@ -59,14 +59,10 @@ echo 'export WEREAD_API_KEY=<your-api-key>' >> ~/.zshrc
 | 🔍 **Book Search** | Search any book in the library, quickly get title, author, rating, and more |
 | 📖 **Book Details** | View book details, table of contents, reading progress, understand your reading journey |
 | ✨ **Smart Recommendations** | Personalized or similar book recommendations based on your reading preferences |
-| 💬 **Reviews & Thoughts** | Manage your book reviews and reading thoughts |
-| 👤 **Profile Information** | Access your reading profile and statistics |
 
 ## Usage
 
-Skills are automatically available after installation. The agent will use them when relevant tasks are detected.
-
-**Examples:**
+After setup, just talk to your AI assistant naturally:
 
 ```
 Search for books about artificial intelligence
@@ -88,10 +84,6 @@ Show my bookshelf and recommend similar books
 How many books have I read this year?
 ```
 
-```
-What are the popular highlights in Chapter 3 of "Thinking, Fast and Slow"?
-```
-
 ## How It Works
 
 The Skill connects to WeRead's Agent API Gateway using your API Key:
@@ -108,7 +100,7 @@ The API Key binds to your WeRead identity (vid), so all personal data requests a
 ```
 weread-skills/
 ├── skills/
-│   └── weread/               # Skill subdirectory (name = weread)
+│   └── weread/               # Skill subdirectory
 │       ├── SKILL.md          # Main skill file with frontmatter
 │       ├── book.md           # Book related functions
 │       ├── search.md         # Search related functions
