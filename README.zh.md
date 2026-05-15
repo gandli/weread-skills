@@ -12,7 +12,7 @@
 
 ---
 
-连接微信读书账号，让 AI 助手随时查阅你的阅读记录。  
+连接微信读书账号，让 AI 助手随时查阅你的阅读记录。
 本仓库是微信读书官方 Agent Skills 的镜像，通过 GitHub Actions 自动同步更新。
 
 </div>
@@ -25,30 +25,31 @@ npx skills add gandli/weread-skills
 
 ## 快速配置
 
-安装 Skill 后，即可通过 API Key 获取你的个人阅读信息。
+安装 Skill 后，需要获取 API Key 才能访问你的个人阅读数据。
 
-1. 复制 Skill 安装指令，发送给你的 AI 助手即可自动安装
-2. 前往 [微信读书官方页面](https://weread.qq.com/r/weread-skills) 获取 API Key 连接你的账号
+### 第一步：获取 API Key
 
-*API Key 用于连接你的微信读书账号，数据仅你可见*
+1. 前往 [微信读书官方 Skill 页面](https://weread.qq.com/r/weread-skills)
+2. 使用微信读书账号登录
+3. 复制你的 API Key（格式：`wrk-xxxxxxxx`）
+
+### 第二步：配置 API Key
+
+告诉你的 AI 助手设置环境变量：
+
+```
+export WEREAD_API_KEY=<你的api-key>
+```
+
+或者写入 shell 配置文件持久化：
+
+```bash
+echo 'export WEREAD_API_KEY=<你的api-key>' >> ~/.zshrc
+```
+
+> **注意：** API Key 用于连接你的微信读书账号，数据仅你可见。
 
 ## 功能特性
-
-### 可用 Skills
-
-#### WeRead
-
-微信读书官方 Skill，提供全面的阅读管理功能。
-
-**使用场景：**
-
-- "帮我搜索关于人工智能的书籍"
-- "显示我的书架"
-- "查看我的阅读统计"
-- "导出《人类简史》的所有笔记"
-- "根据我的阅读偏好推荐好书"
-
-### 功能列表
 
 | 功能 | 描述 |
 |-----|------|
@@ -82,6 +83,25 @@ Skills 安装后自动可用，Agent 会在检测到相关任务时自动使用�
 ```
 显示我的书架并推荐相似的书籍
 ```
+
+```
+今年我读了多少本书？
+```
+
+```
+《思考，快与慢》第三章有哪些热门划线？
+```
+
+## 工作原理
+
+Skill 通过 API Key 连接微信读书的 Agent API Gateway：
+
+```
+POST https://i.weread.qq.com/api/agent/gateway
+Authorization: Bearer $WEREAD_API_KEY
+```
+
+API Key 绑定你的微信读书身份（vid），所有个人数据请求自动限定在你的账号范围内，无需手动传递用户 ID。
 
 ## 目录结构
 

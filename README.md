@@ -12,7 +12,7 @@
 
 ---
 
-Connect your WeRead account, let AI assistant access your reading records anytime.  
+Connect your WeRead account, let AI assistant access your reading records anytime.
 This is the official WeRead Agent Skills collection, automatically synced via GitHub Actions.
 
 </div>
@@ -25,27 +25,29 @@ npx skills add gandli/weread-skills
 
 ## Quick Setup
 
-After installing the Skill, you can access your personal reading information via API Key.
+After installing the Skill, you need an API Key to access your personal reading data.
 
-1. Copy the Skill installation command and send it to your AI assistant
-2. Get API Key from [WeRead Official](https://weread.qq.com/r/weread-skills) to connect your account
+### Step 1: Get Your API Key
 
-*API Key is used to connect your WeRead account, data is visible only to you.*
+1. Go to [WeRead Official Skill Page](https://weread.qq.com/r/weread-skills)
+2. Log in with your WeRead account
+3. Copy your API Key (format: `wrk-xxxxxxxx`)
 
-## Available Skills
+### Step 2: Configure the API Key
 
-### WeRead
+Tell your AI assistant to set the environment variable:
 
-Official WeRead skill with comprehensive reading management capabilities.
+```
+export WEREAD_API_KEY=<your-api-key>
+```
 
-**Use when:**
+Or add it to your shell profile for persistence:
 
-- "Search for books about AI"
-- "Show my bookshelf"
-- "View my reading statistics"
-- "Export my book notes and highlights"
-- "Get book details and table of contents"
-- "Recommend books based on my preferences"
+```bash
+echo 'export WEREAD_API_KEY=<your-api-key>' >> ~/.zshrc
+```
+
+> **Note:** The API Key is used to connect your WeRead account. Your data is only visible to you.
 
 ## Features
 
@@ -81,6 +83,25 @@ Export all notes from "Sapiens"
 ```
 Show my bookshelf and recommend similar books
 ```
+
+```
+How many books have I read this year?
+```
+
+```
+What are the popular highlights in Chapter 3 of "Thinking, Fast and Slow"?
+```
+
+## How It Works
+
+The Skill connects to WeRead's Agent API Gateway using your API Key:
+
+```
+POST https://i.weread.qq.com/api/agent/gateway
+Authorization: Bearer $WEREAD_API_KEY
+```
+
+The API Key binds to your WeRead identity (vid), so all personal data requests are automatically scoped to your account — no need to manually pass user IDs.
 
 ## Structure
 
