@@ -23,7 +23,7 @@ This is the official WeRead Agent Skills collection, automatically synced via Gi
 
 Copy the following command and send it to your AI assistant:
 
-```
+```text
 Download https://cdn.weread.qq.com/skills/weread-skills.zip and install the skill
 ```
 
@@ -43,7 +43,7 @@ npx skills add gandli/weread-skills
 
 Send the following command to your AI assistant with your API Key:
 
-```
+```text
 export WEREAD_API_KEY=<your-api-key>
 ```
 
@@ -64,23 +64,23 @@ export WEREAD_API_KEY=<your-api-key>
 
 After setup, just talk to your AI assistant naturally:
 
-```
+```text
 Search for books about artificial intelligence
 ```
 
-```
+```text
 View my weekly reading statistics
 ```
 
-```
+```text
 Export all notes from "Sapiens"
 ```
 
-```
+```text
 Show my bookshelf and recommend similar books
 ```
 
-```
+```text
 How many books have I read this year?
 ```
 
@@ -88,7 +88,7 @@ How many books have I read this year?
 
 The Skill connects to WeRead's Agent API Gateway using your API Key:
 
-```
+```text
 POST https://i.weread.qq.com/api/agent/gateway
 Authorization: Bearer $WEREAD_API_KEY
 ```
@@ -97,21 +97,20 @@ The API Key binds to your WeRead identity (vid), so all personal data requests a
 
 ## Structure
 
-```
+```text
 weread-skills/
 ├── skills/
 │   └── weread/               # Skill subdirectory
 │       ├── SKILL.md          # Main skill file with frontmatter
 │       ├── book.md           # Book related functions
-│       ├── search.md         # Search related functions
-│       ├── shelf.md          # Shelf management
+│       ├── discover.md       # Discovery and recommendations
 │       ├── notes.md          # Notes and highlights
-│       ├── review.md         # Reviews and thoughts
 │       ├── profile.md        # Profile information
 │       ├── readdata.md       # Reading statistics
-│       ├── discover.md       # Discovery and recommendations
-│       ├── SKILL-README.md   # Skill documentation
-│       └── metadata.json     # Metadata
+│       ├── review.md         # Reviews and thoughts
+│       ├── search.md         # Search related functions
+│       ├── shelf.md          # Shelf management
+│       └── SERVICE_PROFILE.md  # Service profile
 ├── README.md                 # English documentation (main)
 ├── README.zh.md              # Chinese documentation
 ├── CHANGELOG.md              # Changelog
