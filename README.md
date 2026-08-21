@@ -43,7 +43,7 @@ npx skills add gandli/weread-skills
 
 Send the following command to your AI assistant with your API Key:
 
-```text
+```bash
 export WEREAD_API_KEY=<your-api-key>
 ```
 
